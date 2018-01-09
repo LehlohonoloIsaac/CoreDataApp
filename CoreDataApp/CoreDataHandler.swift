@@ -16,7 +16,7 @@ class CoreDataHandler: NSObject {
         return (appDelegate?.persistentContainer.viewContext)!
     }
     
-    class func saveObject(username: String, password: String) -> Bool {
+    class func saveObject(username: String, password: String) -> User {
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
         let managedObject = NSManagedObject(entity: entity!, insertInto: context)
@@ -26,9 +26,9 @@ class CoreDataHandler: NSObject {
         
         do {
             try context.save()
-            return true
+            return managedObject as! User
         } catch {
-            return false
+            return managedObject as! User
         }
     }
     
@@ -42,6 +42,29 @@ class CoreDataHandler: NSObject {
             return users
         } catch {
             return users
+        }
+    }
+    
+    class func deleteObject(user: User) -> Bool {
+        let context = getContext()
+        context.delete(user)
+        do {
+            try context.save()
+            return true
+        } catch {
+            return false
+        }
+    }
+    
+    class func cleanDelete() -> Bool {
+        let context = getContext()
+        let delete = NSBatchDeleteRequest(fetchRequest: User.fetchRequest())
+        
+        do {
+            try context.execute(delete)
+            return true
+        } catch {
+            return false
         }
     }
 }
