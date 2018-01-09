@@ -67,4 +67,18 @@ class CoreDataHandler: NSObject {
             return false
         }
     }
+    
+    class func filterData() -> [User] {
+        let context = getContext()
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        var users: [User]? = nil
+        let predicate = NSPredicate(format: "password contains[c] %@", "2")
+        fetchRequest.predicate = predicate
+        do {
+            users = try context.fetch(fetchRequest)
+            return users!
+        } catch {
+            return users!
+        }
+    }
 }
