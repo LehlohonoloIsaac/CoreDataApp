@@ -12,14 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let _ = CoreDataHandler.saveObject(username: "Hloni", password: "sjndjkk")
+        let _ = CoreDataHandler.saveObject(username: "Niza", password: "jknksjbkjd")
+        let _ = CoreDataHandler.saveObject(username: "Kgopotso", password: "djkbjkbhj")
+        
+        let users = CoreDataHandler.fetchObject()
+        for user in users! {
+            print("\(String(describing: user.username))'s password is \(String(describing: user.password))")
+        }
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

@@ -13,6 +13,8 @@
 		ED839CED2004AE7D00C76F8F /* CoreDataApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED839CEB2004AE7D00C76F8F /* CoreDataApp.xcdatamodeld */; };
 		ED839CEF2004AE7D00C76F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED839CEE2004AE7D00C76F8F /* Assets.xcassets */; };
 		ED839CF22004AE7D00C76F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED839CF02004AE7D00C76F8F /* LaunchScreen.storyboard */; };
+		ED839CFA2004B05200C76F8F /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED839CF92004B05200C76F8F /* CoreDataHandler.swift */; };
+		ED839CFC2004B43500C76F8F /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED839CFB2004B43500C76F8F /* Persistable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		ED839CEE2004AE7D00C76F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED839CF12004AE7D00C76F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED839CF32004AE7D00C76F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED839CF92004B05200C76F8F /* CoreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
+		ED839CFB2004B43500C76F8F /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				ED839CF02004AE7D00C76F8F /* LaunchScreen.storyboard */,
 				ED839CF32004AE7D00C76F8F /* Info.plist */,
 				ED839CEB2004AE7D00C76F8F /* CoreDataApp.xcdatamodeld */,
+				ED839CF92004B05200C76F8F /* CoreDataHandler.swift */,
+				ED839CFB2004B43500C76F8F /* Persistable.swift */,
 			);
 			path = CoreDataApp;
 			sourceTree = "<group>";
@@ -140,8 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED839CE72004AE7D00C76F8F /* ViewController.swift in Sources */,
+				ED839CFA2004B05200C76F8F /* CoreDataHandler.swift in Sources */,
 				ED839CED2004AE7D00C76F8F /* CoreDataApp.xcdatamodeld in Sources */,
 				ED839CE52004AE7D00C76F8F /* AppDelegate.swift in Sources */,
+				ED839CFC2004B43500C76F8F /* Persistable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
